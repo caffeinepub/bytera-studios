@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-landing-page-hero-primary-cta-button-label-start-your-project-so-its-text-renders-in-white-ffffff-and-bold-consistent-with-the-rest-of-the-header-hero-text-styling",
+      "featureTitle": "Update the landing page Hero primary CTA button label \"Start Your Project\" so its text renders in white (#FFFFFF) and bold, consistent with the rest of the header + Hero text styling.",
+      "files": [
+        "frontend/src/components/marketing/Sections.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-21"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

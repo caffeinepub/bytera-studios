@@ -1,0 +1,37 @@
+{
+  "kind": "build_request",
+  "title": "Make the Hero 'Start Your Project' CTA text white and bold",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-21",
+      "text": "Update the landing page Hero primary CTA button label \"Start Your Project\" so its text renders in white (#FFFFFF) and bold, consistent with the rest of the header + Hero text styling.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "make the start your project in white and bold too for landing page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On the landing page Hero section, the \"Start Your Project\" CTA text color is white (#FFFFFF) in its default state.",
+        "The \"Start Your Project\" CTA text remains bold.",
+        "The button remains readable and maintains sufficient contrast in hover/focus/active states without changing the button label text."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui or any path listed in frontend.immutablePaths.",
+    "Keep user-facing text in English."
+  ],
+  "nonGoals": [
+    "No changes to backend/canister code.",
+    "No changes to other sections' copy or layout beyond the \"Start Your Project\" CTA styling."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

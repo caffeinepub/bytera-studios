@@ -1,0 +1,23 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-11T03:39:56.670Z",
+  "summary": "REQ-21 appears implemented: the Hero CTA button label \"Start Your Project\" is styled with white text and bold weight, with hover styling that preserves readability. However, there are additional modified files not explicitly required by the BuildRequest.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Project metadata/documentation updates not requested (updates to frontend-file-summaries and project_state).",
+      "reason": "BuildRequest only asks for CTA text styling change in the Hero section; modifying summary/metadata files is outside the stated scope.",
+      "evidence": [
+        "frontend-file-summaries.txt",
+        "project_state.json"
+      ]
+    }
+  ],
+  "confidence": 0.68,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/marketing/Sections.tsx",
+    "project_state.json"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Hero CTA: make \"Start Your Project\" text white and bold",
+  "requirements": [
+    {
+      "id": "REQ-21",
+      "summary": "Ensure the landing page Hero primary CTA \"Start Your Project\" renders with white (#FFFFFF) bold text while remaining readable across interaction states.",
+      "acceptanceCriteria": [
+        "On the landing page Hero section, the \"Start Your Project\" CTA text color is white (#FFFFFF) in its default state.",
+        "The \"Start Your Project\" CTA text remains bold.",
+        "The button remains readable and maintains sufficient contrast in hover/focus/active states without changing the button label text."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/Sections.tsx",
+          "operation": "modify",
+          "description": "Update the HeroSection primary CTA button styling so the \"Start Your Project\" label uses white text (#FFFFFF) and stays bold (e.g., ensure Tailwind classes enforce text-white (and hover/focus/active text-white as needed) while keeping existing background/hover background behavior unchanged)."
+        }
+      ]
+    }
+  ]
+}

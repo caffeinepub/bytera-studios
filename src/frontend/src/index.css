@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Neon dark theme - high contrast with cyan/magenta neon accents */
+    --background: oklch(12% 0.02 240);
+    --foreground: oklch(98% 0.01 240);
+    
+    --card: oklch(16% 0.025 240);
+    --card-foreground: oklch(98% 0.01 240);
+    
+    --popover: oklch(16% 0.025 240);
+    --popover-foreground: oklch(98% 0.01 240);
+    
+    --primary: oklch(75% 0.18 195);
+    --primary-foreground: oklch(12% 0.02 240);
+    
+    --secondary: oklch(20% 0.03 240);
+    --secondary-foreground: oklch(98% 0.01 240);
+    
+    --muted: oklch(22% 0.03 240);
+    --muted-foreground: oklch(75% 0.04 240);
+    
+    --accent: oklch(75% 0.22 195);
+    --accent-foreground: oklch(12% 0.02 240);
+    
+    --destructive: oklch(65% 0.25 25);
+    --destructive-foreground: oklch(98% 0.01 240);
+    
+    --border: oklch(30% 0.04 240);
+    --input: oklch(30% 0.04 240);
+    --ring: oklch(75% 0.22 195);
+    
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Neon dark theme - same as root for consistent dark mode */
+    --background: oklch(12% 0.02 240);
+    --foreground: oklch(98% 0.01 240);
+    
+    --card: oklch(16% 0.025 240);
+    --card-foreground: oklch(98% 0.01 240);
+    
+    --popover: oklch(16% 0.025 240);
+    --popover-foreground: oklch(98% 0.01 240);
+    
+    --primary: oklch(75% 0.18 195);
+    --primary-foreground: oklch(12% 0.02 240);
+    
+    --secondary: oklch(20% 0.03 240);
+    --secondary-foreground: oklch(98% 0.01 240);
+    
+    --muted: oklch(22% 0.03 240);
+    --muted-foreground: oklch(75% 0.04 240);
+    
+    --accent: oklch(75% 0.22 195);
+    --accent-foreground: oklch(12% 0.02 240);
+    
+    --destructive: oklch(65% 0.25 25);
+    --destructive-foreground: oklch(98% 0.01 240);
+    
+    --border: oklch(30% 0.04 240);
+    --input: oklch(30% 0.04 240);
+    --ring: oklch(75% 0.22 195);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1 {
+    @apply scroll-m-20 text-4xl font-bold tracking-tight lg:text-6xl;
+  }
+  
+  h2 {
+    @apply scroll-m-20 text-3xl font-semibold tracking-tight lg:text-5xl;
+  }
+  
+  h3 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+  
+  h4 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+  
+  p {
+    @apply leading-7;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .neon-glow {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+  
+  .neon-border {
+    box-shadow: 0 0 10px oklch(75% 0.22 195), 0 0 20px oklch(75% 0.22 195 / 0.5);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(var(--accent));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(var(--accent) / 0.8);
+}
