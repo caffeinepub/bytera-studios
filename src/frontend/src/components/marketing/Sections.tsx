@@ -325,30 +325,38 @@ export function AboutSection() {
       <div className={CONTAINER_CLASS}>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="mb-4 text-accent">About Bytera Studios</h2>
-          <p className="text-lg text-muted-foreground font-body">
+          <p className="text-lg text-black font-body">
             Passionate about creating digital excellence
           </p>
         </div>
         
         <div className="max-w-4xl mx-auto space-y-8">
-          <div className="prose prose-invert max-w-none">
-            <p className="text-lg text-muted-foreground leading-relaxed font-body">
-              Based in the heart of regional New South Wales, Bytera Studios is a boutique web development 
-              agency dedicated to crafting exceptional digital experiences. We believe that great websites 
-              are more than just code—they're the perfect fusion of art and engineering.
+          <div className="prose max-w-none">
+            <p className="text-lg leading-relaxed font-body text-black">
+              Founded in the heart of regional New South Wales, Bytera Studios emerged from a passion 
+              for transforming digital visions into reality. We believe that exceptional web experiences 
+              are born at the intersection of technical excellence and creative innovation.
             </p>
             
-            <p className="text-lg text-muted-foreground leading-relaxed font-body">
-              Our team combines technical expertise with creative vision to deliver solutions that not only 
-              meet your business objectives but exceed your expectations. From concept to launch, we're 
-              committed to engineering elegance into every pixel.
+            <p className="text-lg leading-relaxed font-body text-black">
+              Our team combines years of industry experience with a fresh perspective on modern web 
+              development. We don't just build websites—we engineer digital solutions that drive 
+              business growth, engage users, and stand the test of time.
             </p>
             
-            <p className="text-lg text-muted-foreground leading-relaxed font-body">
-              Whether you're a startup looking to make your mark or an established business ready to 
-              elevate your digital presence, we're here to bring your vision to life with precision, 
-              passion, and uncompromising quality.
+            <p className="text-lg leading-relaxed font-body text-black">
+              Every project we undertake is treated with the same dedication and attention to detail, 
+              whether it's a simple landing page or a complex web application. We pride ourselves on 
+              our collaborative approach, working closely with clients to ensure their vision is not 
+              just met, but exceeded.
             </p>
+          </div>
+          
+          <div className="grid md:grid-cols-1 gap-6 pt-8">
+            <div className="text-center p-6 bg-card rounded-lg border border-border">
+              <div className="text-4xl font-bold text-accent mb-2">100%</div>
+              <div className="text-sm text-black font-body">Client Satisfaction</div>
+            </div>
           </div>
         </div>
       </div>
@@ -363,81 +371,51 @@ export function ContactSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="mb-4 text-accent">Get In Touch</h2>
           <p className="text-lg text-muted-foreground font-body">
-            Ready to start your project? Let's create something exceptional together.
+            Ready to start your project? Let's create something extraordinary together.
           </p>
         </div>
         
         <div className="max-w-2xl mx-auto">
-          <div className="bg-card rounded-lg border border-border p-8 md:p-12 shadow-neon">
+          <div className="bg-card rounded-lg border border-border p-8 md:p-12">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <Mail size={24} className="text-accent flex-shrink-0 mt-1" />
+                <Mail className="text-accent flex-shrink-0 mt-1" size={24} />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Email Us</h3>
+                  <h3 className="font-semibold mb-2 text-foreground">Email Us</h3>
                   <a 
-                    href="mailto:hello@byterastudios.com" 
-                    className="text-accent hover:text-accent/80 transition-colors font-body text-lg"
+                    href="mailto:contact@byterastudios.com" 
+                    className="text-accent hover:text-accent/80 transition-colors font-body"
                   >
-                    hello@byterastudios.com
+                    contact@byterastudios.com
                   </a>
-                  <p className="text-muted-foreground mt-2 font-body">
-                    We typically respond within 24 hours
-                  </p>
                 </div>
               </div>
               
               <div className="pt-6 border-t border-border">
                 <p className="text-muted-foreground leading-relaxed font-body">
-                  Tell us about your project, timeline, and goals. We'll get back to you with a 
-                  detailed proposal and next steps. Let's build something amazing together.
+                  Whether you have a detailed project brief or just an idea you'd like to explore, 
+                  we're here to help. Send us an email and we'll get back to you within 24 hours 
+                  to discuss how we can bring your vision to life.
                 </p>
               </div>
+              
+              <button
+                onClick={() => window.location.href = 'mailto:contact@byterastudios.com'}
+                className="w-full px-8 py-4 bg-accent text-accent-foreground rounded-md font-medium hover:bg-accent/90 transition-all shadow-neon hover:shadow-neon-lg inline-flex items-center justify-center gap-2 group"
+              >
+                Send Email
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
-}
-
-export function Footer() {
-  const currentYear = new Date().getFullYear();
-  const appIdentifier = typeof window !== 'undefined' 
-    ? encodeURIComponent(window.location.hostname)
-    : 'bytera-studios';
-
-  return (
-    <footer className="bg-background border-t border-border py-12">
-      <div className={CONTAINER_CLASS}>
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <img
-              src="/assets/generated/bytera-studios-logo-circle-from-full-neon.dim_512x512.png"
-              alt="Bytera Studios logo"
-              className="h-10 w-10 rounded-full object-cover shadow-neon"
-            />
-            <span className="text-lg font-display font-bold text-accent">
-              Bytera Studios
-            </span>
-          </div>
-          
-          <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-muted-foreground font-body">
-            <span>© {currentYear} Bytera Studios. All rights reserved.</span>
-            <span className="hidden md:inline">•</span>
-            <span>
-              Built with ❤️ using{' '}
-              <a
-                href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appIdentifier}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:text-accent/80 transition-colors"
-              >
-                caffeine.ai
-              </a>
-            </span>
-          </div>
+        
+        <div className="mt-16 text-center">
+          <p className="text-sm text-muted-foreground font-body">
+            © {new Date().getFullYear()} Bytera Studios. All rights reserved.
+          </p>
         </div>
       </div>
-    </footer>
+    </section>
   );
 }

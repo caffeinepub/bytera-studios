@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Make the landing page Hero primary CTA (“Start Your Project”) render with white, bold text to match the rest of the header/Hero styling.
+**Goal:** Remove the About section stats claims and the footer “Built with caffeine.ai” attribution from the page.
 
 **Planned changes:**
-- Update the Hero primary CTA button label styling so “Start Your Project” text is white (#FFFFFF) and remains bold in the default state.
-- Ensure hover/focus/active states keep the label readable with sufficient contrast without changing the label text.
+- Remove the “5+ / Years Experience” and “50+ / Projects Completed/Clients” statistic blocks from the About section.
+- Remove the footer attribution line that says “Built with” and links to “caffeine.ai”.
 
-**User-visible outcome:** On the landing page Hero section, the “Start Your Project” CTA appears with bold white text and remains readable across interaction states.
+**User-visible outcome:** The About section no longer shows the “5+” or “50+” stats, and the bottom/footer no longer displays any “Built with caffeine.ai” attribution.

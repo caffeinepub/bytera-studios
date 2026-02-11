@@ -72,7 +72,7 @@ export function HeaderNav() {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
-              className="px-5 py-2.5 bg-accent text-accent-foreground rounded-md text-sm font-bold hover:bg-accent/90 transition-all shadow-neon hover:shadow-neon-lg"
+              className="px-5 py-2.5 bg-accent text-white rounded-md text-sm font-bold hover:bg-accent/90 transition-all shadow-neon hover:shadow-neon-lg"
             >
               Get Started
             </a>
@@ -105,7 +105,7 @@ export function HeaderNav() {
               <a
                 href="#contact"
                 onClick={(e) => handleNavClick(e, '#contact')}
-                className="mx-4 mt-2 px-5 py-3 bg-accent text-accent-foreground rounded-md text-sm font-bold hover:bg-accent/90 transition-all text-center shadow-neon"
+                className="mx-4 mt-2 px-5 py-3 bg-accent text-white rounded-md text-sm font-bold hover:bg-accent/90 transition-all text-center shadow-neon"
               >
                 Get Started
               </a>

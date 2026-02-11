@@ -1,37 +1,62 @@
 {
   "kind": "build_request",
-  "title": "Make the Hero 'Start Your Project' CTA text white and bold",
+  "title": "Remove About stats and Caffeine.ai footer attribution",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-21",
-      "text": "Update the landing page Hero primary CTA button label \"Start Your Project\" so its text renders in white (#FFFFFF) and bold, consistent with the rest of the header + Hero text styling.",
+      "id": "REQ-23",
+      "text": "Remove the \"5+\" / \"Years Experience\" and \"50+\" / \"Projects Completed\" statistic blocks from the About section so these claims no longer appear anywhere on the page.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages"
+          "msg-1"
         ],
         "quotes": [
-          "make the start your project in white and bold too for landing page"
+          "remove the 5 + year, 50 clients and the made using caffeine ai at the bottom"
         ]
       },
       "acceptanceCriteria": [
-        "On the landing page Hero section, the \"Start Your Project\" CTA text color is white (#FFFFFF) in its default state.",
-        "The \"Start Your Project\" CTA text remains bold.",
-        "The button remains readable and maintains sufficient contrast in hover/focus/active states without changing the button label text."
+        "The About section no longer displays a \"5+\" years experience statistic.",
+        "The About section no longer displays a \"50+\" projects/clients statistic.",
+        "No other part of the page contains the removed \"5+\" or \"50+\" stats text."
+      ]
+    },
+    {
+      "id": "REQ-24",
+      "text": "Remove the footer attribution line at the bottom of the page that says the site was \"Built with\" and links to \"caffeine.ai\" so that \"made using caffeine ai\" (or equivalent) no longer appears.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "remove the 5 + year, 50 clients and the made using caffeine ai at the bottom"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The bottom-of-page/footer area no longer contains the text \"Built with\" and no longer links to \"caffeine.ai\".",
+        "No other part of the page contains any \"made using caffeine ai\" / \"built with caffeine\" attribution text."
       ]
     }
   ],
   "constraints": [
-    "Do not edit files under frontend/src/components/ui or any path listed in frontend.immutablePaths.",
-    "Keep user-facing text in English."
+    "Do not edit any files under frontend/src/components/ui or other frontend immutable paths listed in SYSTEM_CONTEXT."
   ],
   "nonGoals": [
-    "No changes to backend/canister code.",
-    "No changes to other sections' copy or layout beyond the \"Start Your Project\" CTA styling."
+    "Do not change any other marketing copy, pricing content, or navigation labels beyond removing the specified stats and footer attribution."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

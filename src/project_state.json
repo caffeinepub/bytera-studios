@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 17,
+  "projectStateVersion": 21,
   "summary": "Company marketing website rebranded to Bytera Studios with a dark theme, Australian English copy, improved readability of the regional NSW-based messaging section, updated pricing plan copy (Basic/Standard/Premium) with Standard highlighted as Most Popular, and the user’s full logo used in the top-left header.",
   "architectural_notes": [
     "Site should use a dark theme while maintaining the existing elegant brand direction (avoid blue/purple-dominant palette).",
@@ -187,6 +187,30 @@
         "REQ-21"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-about-bytera-studios-section-so-that-all-body-text-under-the-about-bytera-studios-heading-including-the-subheading-line-and-all-paragraph-copy-in-the-section-renders-in-black-000000",
+      "title": "Update the “About Bytera Studios” section so that all body text under the “About Bytera Studios” heading (including the subheading line and all paragraph copy in the section) renders in black (#000000).",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-5-years-experience-and-50-projects-completed-statistic-blocks-from-the-about-section-so-these-claims-no-longer-appear-anywhere-on-the-page",
+      "title": "Remove the \"5+\" / \"Years Experience\" and \"50+\" / \"Projects Completed\" statistic blocks from the About section so these claims no longer appear anywhere on the page.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-footer-attribution-line-at-the-bottom-of-the-page-that-says-the-site-was-built-with-and-links-to-caffeine-ai-so-that-made-using-caffeine-ai-or-equivalent-no-longer-appears",
+      "title": "Remove the footer attribution line at the bottom of the page that says the site was \"Built with\" and links to \"caffeine.ai\" so that \"made using caffeine ai\" (or equivalent) no longer appears.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -283,6 +307,24 @@
     {
       "id": "AR-16",
       "summary": "Make all text content before the 'Our Services' section display as white and bold for improved readability.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Make the top-right \"Get Started\" header button text render white (#FFFFFF) and bold.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Set all text under the \"About Bytera Studios\" heading/section to black (improve contrast as requested).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Remove the “5+ years”, “50 clients”, and “made using caffeine ai” text from the bottom/footer of the site.",
       "reqIds": [],
       "status": "pending"
     }
