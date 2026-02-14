@@ -1,36 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove About stats blocks and footer caffeine.ai attribution",
+  "title": "Add deposit note under each pricing plan",
   "requirements": [
     {
-      "id": "REQ-23",
-      "summary": "Remove the 5+ Years Experience and 50+ Projects Completed statistic blocks from the About section.",
+      "id": "REQ-1",
+      "summary": "Add a visually subordinate, dark-theme-readable deposit note under each Basic/Standard/Premium pricing plan stating “$50 deposit required” plus a brief reason.",
       "acceptanceCriteria": [
-        "The About section no longer displays a \"5+\" years experience statistic.",
-        "The About section no longer displays a \"50+\" projects/clients statistic.",
-        "No other part of the page contains the removed \"5+\" or \"50+\" stats text."
+        "Each of the three pricing cards (Basic, Standard, Premium) displays the exact phrase “$50 deposit required”.",
+        "Each pricing card includes 1 short sentence of reasoning next to or below the deposit phrase (e.g., mentions building a website preview/prototype).",
+        "The deposit note is displayed consistently across all plans and does not break the existing layout on mobile or desktop.",
+        "No backend changes are introduced."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/marketing/Sections.tsx",
           "operation": "modify",
-          "description": "In AboutSection, remove the two statistic cards that render \"5+\"/\"Years Experience\" and \"50+\"/\"Projects Completed\", ensuring those strings no longer appear anywhere in the rendered page."
-        }
-      ]
-    },
-    {
-      "id": "REQ-24",
-      "summary": "Remove the footer attribution line that says \"Built with\" and links to caffeine.ai from the bottom of the page.",
-      "acceptanceCriteria": [
-        "The bottom-of-page/footer area no longer contains the text \"Built with\" and no longer links to \"caffeine.ai\".",
-        "No other part of the page contains any \"made using caffeine ai\" / \"built with caffeine\" attribution text."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/marketing/Sections.tsx",
-          "operation": "modify",
-          "description": "In ContactSection, remove the bottom attribution paragraph that includes \"Built with\" and the outbound link to \"caffeine.ai\", ensuring no equivalent attribution text remains anywhere on the page."
+          "description": "Update the PricingSection card markup to render a consistent small/muted deposit note under each plan description, containing the exact phrase “$50 deposit required” and one short English sentence explaining it covers initial work such as creating a website preview/prototype; ensure styling remains visually subordinate (e.g., smaller text + muted color) yet readable in the dark theme and does not affect the grid/layout on mobile/desktop."
         }
       ]
     }

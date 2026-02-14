@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-5-years-experience-and-50-projects-completed-statistic-blocks-from-the-about-section-so-these-claims-no-longer-appear-anywhere-on-the-page",
-      "featureTitle": "Remove the \"5+\" / \"Years Experience\" and \"50+\" / \"Projects Completed\" statistic blocks from the About section so these claims no longer appear anywhere on the page.",
+      "featureId": "feature-in-the-pricing-section-add-a-short-note-under-each-pricing-plan-basic-standard-premium-that-states-50-deposit-required-and-includes-a-brief-clear-reason-e-g-that-the-deposit-covers-initial-work-like-creating-a-website-preview-prototype-before-full-development-use-english-for-the-new-user-facing-copy-and-keep-the-note-visually-subordinate-to-the-plan-description-small-text-muted-styling-while-still-readable-in-the-dark-theme",
+      "featureTitle": "In the Pricing section, add a short note under each pricing plan (Basic, Standard, Premium) that states “$50 deposit required” and includes a brief, clear reason (e.g., that the deposit covers initial work like creating a website preview/prototype before full development). Use English for the new user-facing copy and keep the note visually subordinate to the plan description (small text / muted styling) while still readable in the dark theme.",
       "files": [
         "frontend/src/components/marketing/Sections.tsx"
       ],
@@ -15,25 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-23"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-remove-the-footer-attribution-line-at-the-bottom-of-the-page-that-says-the-site-was-built-with-and-links-to-caffeine-ai-so-that-made-using-caffeine-ai-or-equivalent-no-longer-appears",
-      "featureTitle": "Remove the footer attribution line at the bottom of the page that says the site was \"Built with\" and links to \"caffeine.ai\" so that \"made using caffeine ai\" (or equivalent) no longer appears.",
-      "files": [
-        "frontend/src/components/marketing/Sections.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-24"
+        "REQ-1"
       ],
       "confidence": "high"
     }

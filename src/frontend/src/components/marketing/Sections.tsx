@@ -151,7 +151,7 @@ export function PricingSection() {
     {
       name: 'Basic',
       price: '$120',
-      period: 'per hour',
+      period: 'per month',
       description: 'Perfect for small projects and quick updates',
       features: [
         'Single-page websites',
@@ -164,7 +164,7 @@ export function PricingSection() {
     {
       name: 'Standard',
       price: '$175',
-      period: 'per hour',
+      period: 'per month',
       description: 'Ideal for growing businesses',
       features: [
         'Multi-page websites',
@@ -174,12 +174,13 @@ export function PricingSection() {
         'E-commerce functionality',
         '3 months support'
       ],
-      popular: true
+      popular: true,
+      freeTrial: '2 weeks free'
     },
     {
       name: 'Premium',
       price: '$215',
-      period: 'per hour',
+      period: 'per month',
       description: 'For complex applications and enterprises',
       features: [
         'Custom web applications',
@@ -188,7 +189,8 @@ export function PricingSection() {
         'Security hardening',
         'Scalable architecture',
         '6 months support'
-      ]
+      ],
+      freeTrial: '1 month free'
     }
   ];
 
@@ -198,7 +200,7 @@ export function PricingSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="mb-4 text-accent">Transparent Pricing</h2>
           <p className="text-lg text-muted-foreground font-body">
-            Flexible hourly rates for projects of any size. All prices in AUD.
+            Flexible monthly plans for projects of any size. All prices in AUD per month.
           </p>
         </div>
         
@@ -224,7 +226,15 @@ export function PricingSection() {
                   <span className="text-4xl font-bold text-accent">{plan.price}</span>
                   <span className="text-muted-foreground font-body">{plan.period}</span>
                 </div>
-                <p className="text-muted-foreground font-body">{plan.description}</p>
+                {plan.freeTrial && (
+                  <div className="inline-block px-3 py-1 bg-accent/20 border border-accent/40 rounded-md text-accent text-sm font-semibold mb-2">
+                    {plan.freeTrial}
+                  </div>
+                )}
+                <p className="text-muted-foreground font-body mb-3">{plan.description}</p>
+                <div className="text-sm text-muted-foreground/80 font-body">
+                  <span className="font-semibold">$50 deposit required</span> to build your website preview and begin development.
+                </div>
               </div>
               
               <ul className="space-y-3 mb-8">
@@ -383,10 +393,10 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-semibold mb-2 text-foreground">Email Us</h3>
                   <a 
-                    href="mailto:contact@byterastudios.com" 
+                    href="mailto:bytera.studios@gmail.com" 
                     className="text-accent hover:text-accent/80 transition-colors font-body"
                   >
-                    contact@byterastudios.com
+                    bytera.studios@gmail.com
                   </a>
                 </div>
               </div>
@@ -400,7 +410,7 @@ export function ContactSection() {
               </div>
               
               <button
-                onClick={() => window.location.href = 'mailto:contact@byterastudios.com'}
+                onClick={() => window.location.href = 'mailto:bytera.studios@gmail.com'}
                 className="w-full px-8 py-4 bg-accent text-accent-foreground rounded-md font-medium hover:bg-accent/90 transition-all shadow-neon hover:shadow-neon-lg inline-flex items-center justify-center gap-2 group"
               >
                 Send Email

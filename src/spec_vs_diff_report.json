@@ -1,20 +1,26 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-11T04:25:22.790Z",
-  "summary": "REQ-23 and REQ-24 appear to be implemented: the About section stats for “5+ Years Experience” and “50+ Projects Completed” are reported removed, and the footer “Built with … caffeine.ai” attribution is reported removed. However, the actual About/footer code is not visible in the truncated Sections.tsx excerpt, so verification relies on the provided file summary text.",
+  "generatedAt": "2026-02-14T00:38:42.948Z",
+  "summary": "REQ-1 appears to be implemented in the Pricing section: a “$50 deposit required” note with a brief reason is added under each plan description. However, the diff summary also indicates additional Pricing changes (monthly billing text and free-trial badges) that were not requested and may violate the non-goals.",
   "missing_requirements": [],
   "hallucinated_features": [
     {
-      "description": "Updated/rewritten repository meta summaries (frontend-file-summaries and project_state) beyond the requested UI removals.",
-      "reason": "BuildRequest only asked to remove two About stats and a footer attribution line; changes to project metadata/summaries were not requested.",
+      "description": "Pricing section changed to display monthly billing (AUD per month).",
+      "reason": "Not requested by REQ-1 and not part of the stated goal (only add a deposit note). This may also conflict with the non-goal of not changing existing pricing presentation.",
       "evidence": [
-        "frontend-file-summaries.txt",
-        "project_state.json (truncated)"
+        "frontend-file-summaries.txt (entry for \"frontend/src/components/marketing/Sections.tsx\": \"Pricing section now displays monthly billing (AUD per month)\")"
+      ]
+    },
+    {
+      "description": "Added free trial badges for Standard (2 weeks free) and Premium (1 month free) plans.",
+      "reason": "Not requested by REQ-1; the request only asks to add a deposit note under each plan.",
+      "evidence": [
+        "frontend-file-summaries.txt (entry for \"frontend/src/components/marketing/Sections.tsx\": \"with free trial badges for Standard (2 weeks free) and Premium (1 month free) plans\")"
       ]
     }
   ],
-  "confidence": 0.62,
+  "confidence": 0.72,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/marketing/Sections.tsx",

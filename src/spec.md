@@ -1,10 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Remove the About section stats claims and the footer “Built with caffeine.ai” attribution from the page.
+**Goal:** Add a small, clear “$50 deposit required” note with brief reasoning under each pricing plan in the Pricing section.
 
 **Planned changes:**
-- Remove the “5+ / Years Experience” and “50+ / Projects Completed/Clients” statistic blocks from the About section.
-- Remove the footer attribution line that says “Built with” and links to “caffeine.ai”.
+- Update the Pricing section UI so each plan card (Basic, Standard, Premium) includes the exact phrase “$50 deposit required”.
+- Add one short English sentence explaining the purpose of the deposit (e.g., covering initial work like a website preview/prototype) under or next to the deposit phrase.
+- Style the deposit note as visually subordinate (small/muted) but readable in the existing dark theme, keeping layout consistent on mobile and desktop.
 
-**User-visible outcome:** The About section no longer shows the “5+” or “50+” stats, and the bottom/footer no longer displays any “Built with caffeine.ai” attribution.
+**User-visible outcome:** Each pricing plan card shows “$50 deposit required” plus a short explanation, presented in subtle readable text without changing prices, plan names, or features.

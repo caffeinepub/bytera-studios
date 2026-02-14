@@ -1,29 +1,18 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-11T04:25:22.793Z",
+  "generatedAt": "2026-02-14T00:38:42.950Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-23",
-        "summary": "Remove the \"5+\" / \"Years Experience\" and \"50+\" / \"Projects Completed\" statistic blocks from the About section so these claims no longer appear anywhere on the page.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/marketing/Sections.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/marketing/Sections.tsx"
-        ]
-      },
-      {
-        "id": "REQ-24",
-        "summary": "Remove the footer attribution line at the bottom of the page that says the site was \"Built with\" and links to \"caffeine.ai\" so that \"made using caffeine ai\" (or equivalent) no longer appears.",
+        "id": "REQ-1",
+        "summary": "In the Pricing section, add a short note under each pricing plan (Basic, Standard, Premium) that states “$50 deposit required” and includes a brief, clear reason (e.g., that the deposit covers initial work like creating a website preview/prototype before full development). Use English for the new user-facing copy and keep the note visually subordinate to the plan description (small text / muted styling) while still readable in the dark theme.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/marketing/Sections.tsx"

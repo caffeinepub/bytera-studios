@@ -1,49 +1,35 @@
 {
   "kind": "build_request",
-  "title": "Remove About stats and Caffeine.ai footer attribution",
+  "title": "Add $50 deposit note with brief reasoning under each pricing plan",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-23",
-      "text": "Remove the \"5+\" / \"Years Experience\" and \"50+\" / \"Projects Completed\" statistic blocks from the About section so these claims no longer appear anywhere on the page.",
+      "id": "REQ-1",
+      "text": "In the Pricing section, add a short note under each pricing plan (Basic, Standard, Premium) that states “$50 deposit required” and includes a brief, clear reason (e.g., that the deposit covers initial work like creating a website preview/prototype before full development). Use English for the new user-facing copy and keep the note visually subordinate to the plan description (small text / muted styling) while still readable in the dark theme.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-1"
         ],
         "quotes": [
-          "remove the 5 + year, 50 clients and the made using caffeine ai at the bottom"
+          "under each pricing plan write smth like $50 deposit required and add some shirt reasoning like to build website preview ect..."
         ]
       },
       "acceptanceCriteria": [
-        "The About section no longer displays a \"5+\" years experience statistic.",
-        "The About section no longer displays a \"50+\" projects/clients statistic.",
-        "No other part of the page contains the removed \"5+\" or \"50+\" stats text."
-      ]
-    },
-    {
-      "id": "REQ-24",
-      "text": "Remove the footer attribution line at the bottom of the page that says the site was \"Built with\" and links to \"caffeine.ai\" so that \"made using caffeine ai\" (or equivalent) no longer appears.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "remove the 5 + year, 50 clients and the made using caffeine ai at the bottom"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The bottom-of-page/footer area no longer contains the text \"Built with\" and no longer links to \"caffeine.ai\".",
-        "No other part of the page contains any \"made using caffeine ai\" / \"built with caffeine\" attribution text."
+        "Each of the three pricing cards (Basic, Standard, Premium) displays the exact phrase “$50 deposit required”.",
+        "Each pricing card includes 1 short sentence of reasoning next to or below the deposit phrase (e.g., mentions building a website preview/prototype).",
+        "The deposit note is displayed consistently across all plans and does not break the existing layout on mobile or desktop.",
+        "No backend changes are introduced."
       ]
     }
   ],
   "constraints": [
-    "Do not edit any files under frontend/src/components/ui or other frontend immutable paths listed in SYSTEM_CONTEXT."
+    "Do not modify any files under frontend/src/components/ui (read-only).",
+    "Keep all user-facing text in English for this change."
   ],
   "nonGoals": [
-    "Do not change any other marketing copy, pricing content, or navigation labels beyond removing the specified stats and footer attribution."
+    "Implementing payments, invoicing, or deposit collection flows.",
+    "Changing plan prices, plan names, or existing feature bullet lists."
   ],
   "imageRequirements": {
     "required": [],
